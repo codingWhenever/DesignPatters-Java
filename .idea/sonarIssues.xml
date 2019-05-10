@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p1SimpleFactoryPattern/CarFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p1SimpleFactoryPattern/bean/BMWCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p1SimpleFactoryPattern/bean/BenzCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p1SimpleFactoryPattern/bean/Car.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p1simpleFactoryPattern/CarFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p1simpleFactoryPattern/bean/BMWCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p1simpleFactoryPattern/bean/BenzCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p1simpleFactoryPattern/bean/Car.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p2FactoryMethodPattern/DataBaseLog.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p2FactoryMethodPattern/DataBaseLogFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p2FactoryMethodPattern/FileLog.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p2FactoryMethodPattern/FileLogFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p2FactoryMethodPattern/Log.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p2FactoryMethodPattern/LogFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/AbsFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/AbsProductA.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/AbsProductB.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ConcreateFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ConcreateFactory2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ConcreteFactory1.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ConcreteFactory1.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ConcreteFactory2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ProductA1.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ProductA2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ProductB1.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p3AbstractFactoryPattern/ProductB2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p4BuilderPattern/ConcreteBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p4BuilderPattern/Director.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p4BuilderPattern/Product.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p5SingletonPattern/MySingleton.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/p5SingletonPattern/Singleton.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/simpleFactoryPattern/BMWCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/simpleFactoryPattern/BenzCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/simpleFactoryPattern/Car.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/simpleFactoryPattern/CarFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/simpleFactoryPattern/bean/BMWCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/simpleFactoryPattern/bean/BenzCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/leo/sz/com/designpatters/creationalPattern/simpleFactoryPattern/bean/Car.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="F:/eat_code_android/eat-android-robot/branches/V3.1.15-0410/ModuleRobot/src/main/java/com/sz/eat/robot/jpush/RobotJPushMessageReceiver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="F:/workspace_eat/eat-android-robot/ModuleRobot/src/main/debug/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="F:/workspace_eat/eat-android-robot/ModuleRobot/src/main/res/layout/robot_layout_text_item_child.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
