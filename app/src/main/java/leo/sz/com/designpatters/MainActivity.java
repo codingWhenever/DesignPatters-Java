@@ -1,7 +1,10 @@
 package leo.sz.com.designpatters;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationHandler;
 
 import leo.sz.com.designpatters.creationalPattern.p3AbstractFactoryPattern.AbsFactory;
 import leo.sz.com.designpatters.creationalPattern.p3AbstractFactoryPattern.AbsProductA;
@@ -14,13 +17,16 @@ import leo.sz.com.designpatters.creationalPattern.p4BuilderPattern.Product;
 import leo.sz.com.designpatters.creationalPattern.p5SingletonPattern.MySingleton;
 import leo.sz.com.designpatters.structuralPattern.p10FlyweightPattern.Circle;
 import leo.sz.com.designpatters.structuralPattern.p10FlyweightPattern.ShapeFactory;
+import leo.sz.com.designpatters.structuralPattern.p11ProxyPattern.dynamicProxy.DynamicSubject;
+import leo.sz.com.designpatters.structuralPattern.p11ProxyPattern.dynamicProxy.RealSubject;
+import leo.sz.com.designpatters.structuralPattern.p11ProxyPattern.dynamicProxy.Subject;
+import leo.sz.com.designpatters.structuralPattern.p11ProxyPattern.staticProxy.Proxy;
 import leo.sz.com.designpatters.structuralPattern.p6AdapterPattern.Adaptee;
 import leo.sz.com.designpatters.structuralPattern.p6AdapterPattern.Adapter;
 import leo.sz.com.designpatters.structuralPattern.p6AdapterPattern.Target;
 import leo.sz.com.designpatters.structuralPattern.p7BridgePattern.Abstraction;
 import leo.sz.com.designpatters.structuralPattern.p7BridgePattern.ConcreteImplementorA;
 import leo.sz.com.designpatters.structuralPattern.p7BridgePattern.ConcreteImplementorB;
-import leo.sz.com.designpatters.structuralPattern.p7BridgePattern.Implementor;
 import leo.sz.com.designpatters.structuralPattern.p7BridgePattern.RefinedAbstraction;
 import leo.sz.com.designpatters.structuralPattern.p8DecoratorPattern.Component;
 import leo.sz.com.designpatters.structuralPattern.p8DecoratorPattern.ConcreteComponent;
@@ -51,7 +57,12 @@ public class MainActivity extends AppCompatActivity {
         facade();
 
         flyWeight();
+
+        proxy();
+
+        dynamicProxy();
     }
+
 
     /**
      * 抽象工厂模式
@@ -166,5 +177,36 @@ public class MainActivity extends AppCompatActivity {
 
     private static int getRandomY() {
         return (int) (Math.random() * 100);
+    }
+
+    /**
+     * 代理模式
+     */
+    private static void proxy() {
+        System.out.println("------Proxy Pattern------");
+        Proxy proxy = new Proxy();
+        proxy.request();
+    }
+
+    /**
+     * 动态代理
+     */
+    private static void dynamicProxy() {
+        System.out.println("------Dynamic proxy Pattern------");
+        RealSubject rs = new RealSubject();
+        InvocationHandler handler = new DynamicSubject(rs);
+        Class cls = rs.getClass();
+        Subject subject1 = (Subject) java.lang.reflect.Proxy.newProxyInstance(cls.getClassLoader(), cls.getInterfaces(), handler);
+        subject1.request();
+
+//        try {
+//            Class c = java.lang.reflect.Proxy.getProxyClass(cls.getClassLoader(), cls.getInterfaces());
+//            Constructor ct = c.getConstructor(new Class[]{InvocationHandler.class});
+//            Subject sub = (Subject) ct.newInstance(new Object[]{handler});
+//            sub.request();
+//        } catch (Exception ex) {
+//
+//        }
+
     }
 }
