@@ -14,6 +14,16 @@ import leo.sz.com.designpatters.BehavioralPattern.p14ObserverPattern.BinaryObser
 import leo.sz.com.designpatters.BehavioralPattern.p14ObserverPattern.ConcreteSubject;
 import leo.sz.com.designpatters.BehavioralPattern.p14ObserverPattern.HexaObserver;
 import leo.sz.com.designpatters.BehavioralPattern.p14ObserverPattern.OctalObserver;
+import leo.sz.com.designpatters.BehavioralPattern.p15StatePattern.ConcreteStateB;
+import leo.sz.com.designpatters.BehavioralPattern.p15StatePattern.Context;
+import leo.sz.com.designpatters.BehavioralPattern.p15StatePattern.GContext;
+import leo.sz.com.designpatters.BehavioralPattern.p15StatePattern.IState;
+import leo.sz.com.designpatters.BehavioralPattern.p15StatePattern.StartState;
+import leo.sz.com.designpatters.BehavioralPattern.p15StatePattern.StopState;
+import leo.sz.com.designpatters.BehavioralPattern.p15StatePattern.voter.VoteManager;
+import leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.OperationAdd;
+import leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.OperationMultiply;
+import leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.OperationSubstract;
 import leo.sz.com.designpatters.CreationalPattern.p3AbstractFactoryPattern.AbsFactory;
 import leo.sz.com.designpatters.CreationalPattern.p3AbstractFactoryPattern.AbsProductA;
 import leo.sz.com.designpatters.CreationalPattern.p3AbstractFactoryPattern.AbsProductB;
@@ -75,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
         Mediator();
 
         observer();
+
+        state();
+
+        statePattern();
+
+        voteStatePattern();
+
+        strategy();
     }
 
 
@@ -262,5 +280,56 @@ public class MainActivity extends AppCompatActivity {
         ((ConcreteSubject) subject).setState(15);
         System.out.println("Second state change: 10");
         ((ConcreteSubject) subject).setState(10);
+    }
+
+    /**
+     * 状态模式
+     */
+    public static void state() {
+        System.out.println("------State Pattern 1------");
+        Context context = new Context();
+        new StartState().doAction(context);
+
+        System.out.println(context.getState().toString());
+
+        new StopState().doAction(context);
+        System.out.println(context.getState().toString());
+    }
+
+    /**
+     * 状态模式2
+     */
+    public static void statePattern() {
+        System.out.println("------State Pattern 2------");
+        IState state = new ConcreteStateB();
+        GContext context = new GContext();
+        context.setState(state);
+        context.request("test");
+    }
+
+    /**
+     * 状态模式3 模拟投票器
+     */
+    public static void voteStatePattern() {
+        System.out.println("------State Pattern 3------");
+        VoteManager manager = new VoteManager();
+        for (int i = 0; i < 9; i++) {
+            manager.vote("leo", "A");
+        }
+    }
+
+    /**
+     * 策略模式
+     */
+    public static void strategy() {
+        System.out.println("------Strategy Pattern------");
+        leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.Context context = new leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.Context(new OperationAdd());
+        System.out.println("10 + 5 = " + context.executeStrategy(10, 5));
+
+        context = new leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.Context(new OperationSubstract());
+        System.out.println("10 - 5 = " + context.executeStrategy(10, 5));
+
+        context = new leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.Context(new OperationMultiply());
+        System.out.println("10 * 5 =" + context.executeStrategy(10, 5));
     }
 }
