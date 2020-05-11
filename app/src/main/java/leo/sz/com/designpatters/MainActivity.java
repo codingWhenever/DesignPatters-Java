@@ -24,6 +24,10 @@ import leo.sz.com.designpatters.BehavioralPattern.p15StatePattern.voter.VoteMana
 import leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.OperationAdd;
 import leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.OperationMultiply;
 import leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.OperationSubstract;
+import leo.sz.com.designpatters.BehavioralPattern.p17ChainOfResponsibilityPattern.AbsLogger;
+import leo.sz.com.designpatters.BehavioralPattern.p17ChainOfResponsibilityPattern.ConsoleLogger;
+import leo.sz.com.designpatters.BehavioralPattern.p17ChainOfResponsibilityPattern.ErrorLogger;
+import leo.sz.com.designpatters.BehavioralPattern.p17ChainOfResponsibilityPattern.FileLogger;
 import leo.sz.com.designpatters.CreationalPattern.p3AbstractFactoryPattern.AbsFactory;
 import leo.sz.com.designpatters.CreationalPattern.p3AbstractFactoryPattern.AbsProductA;
 import leo.sz.com.designpatters.CreationalPattern.p3AbstractFactoryPattern.AbsProductB;
@@ -62,37 +66,42 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void main(String[] args) {
-        absFactory();
-        builder();
-        singleton();
+//        absFactory();
+//        builder();
+//        singleton();
+//
+//        adapter();
+//
+//        bridge();
+//
+//        decorator();
+//
+//        facade();
+//
+//        flyWeight();
+//
+//        proxy();
+//
+//        dynamicProxy();
+//
+//        command();
+//
+//        Mediator();
+//
+//        observer();
+//
+//        state();
+//
+//        statePattern();
+//
+//        voteStatePattern();
+//
+//        strategy();
 
-        adapter();
-
-        bridge();
-
-        decorator();
-
-        facade();
-
-        flyWeight();
-
-        proxy();
-
-        dynamicProxy();
-
-        command();
-
-        Mediator();
-
-        observer();
-
-        state();
-
-        statePattern();
-
-        voteStatePattern();
-
-        strategy();
+        AbsLogger loggerChain = getChainOfLoggers();
+        loggerChain.logMessage(AbsLogger.INFO, "this is an information.");
+        loggerChain.logMessage(AbsLogger.DEBUG, "this is a debug level information");
+        loggerChain.logMessage(AbsLogger.ERROR, "this is a error level information");
     }
 
 
@@ -331,5 +340,18 @@ public class MainActivity extends AppCompatActivity {
 
         context = new leo.sz.com.designpatters.BehavioralPattern.p16StrategyPattern.Context(new OperationMultiply());
         System.out.println("10 * 5 =" + context.executeStrategy(10, 5));
+    }
+
+    /**
+     * 责任链模式
+     * @return
+     */
+    public static AbsLogger getChainOfLoggers() {
+        AbsLogger consoleLogger = new ConsoleLogger(AbsLogger.INFO);
+        AbsLogger errorLogger = new ErrorLogger(AbsLogger.ERROR);
+        AbsLogger fileLogger = new FileLogger(AbsLogger.DEBUG);
+        consoleLogger.setNextLogger(fileLogger);
+        fileLogger.setNextLogger(errorLogger);
+        return errorLogger;
     }
 }
